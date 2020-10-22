@@ -92,6 +92,7 @@
   text-transform: uppercase;
   font-size: 12px;
   margin-bottom: 0;
+  background-color:  #354E6B;
 }
 
 @media screen and (min-width: 40em) {
@@ -129,4 +130,5 @@
   text-transform: uppercase;
   font-size: 12px;
   margin-bottom: 0;
+  background-color:  #354E6B;;
 }
