@@ -17,6 +17,46 @@
 
 }
 
+/* Home, News, Jobs subtitles */
+.subnav-hero-section .subnav-hero-headline {
+  color: #fefefe;
+}
+
+.subnav-hero-subnav {
+  float: none;
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  bottom: 0;
+  width: 100%;
+}
+
+.subnav-hero-subnav li {
+  float: none;
+  display: inline-block;
+}
+
+.subnav-hero-subnav li a {
+  padding: 0.9rem 1rem;
+  font-size: 0.75rem;
+  color: #fefefe;
+  text-transform: uppercase;
+  display: block;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.35s ease-in-out;
+}
+
+.subnav-hero-subnav li a.is-active {
+  background: rgba(254, 254, 254, 0.15);
+}
+
+.subnav-hero-subnav li a:hover {
+  background: rgba(254, 254, 254, 0.15);
+}
+
+
+
  /* News Hero Style */
 .marketing-site-hero{
   background: url("news-hero.jpg") top right no-repeat;
@@ -90,157 +130,3 @@
   font-size: 12px;
   margin-bottom: 0;
 }
-
-
-
-/* Home, News, Jobs subtitles */
-.subnav-hero-section .subnav-hero-headline {
-  color: #fefefe;
-}
-
-.subnav-hero-subnav {
-  float: none;
-  position: absolute;
-  text-align: center;
-  margin: 0 auto;
-  bottom: 0;
-  width: 100%;
-}
-
-.subnav-hero-subnav li {
-  float: none;
-  display: inline-block;
-}
-
-.subnav-hero-subnav li a {
-  padding: 0.9rem 1rem;
-  font-size: 0.75rem;
-  color: #fefefe;
-  text-transform: uppercase;
-  display: block;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: all 0.35s ease-in-out;
-}
-
-.subnav-hero-subnav li a.is-active {
-  background: rgba(254, 254, 254, 0.15);
-}
-
-.subnav-hero-subnav li a:hover {
-  background: rgba(254, 254, 254, 0.15);
-}
-
-
-
-
-
-
-/*articles*/
-.featured-article-big {
-  background: url("https://placehold.it/600?text=Big+Feature") no-repeat center center;
-  background-size: cover;
-  height: 28.125rem;
-  width: 100%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0.625rem;
-  border-right: 0.0625rem solid #fefefe;
-}
-
-.featured-article-big .featured-article-text .featured-article-title {
-  font-size: 1.75rem;
-  font-weight: bold;
-  line-height: 1.875rem;
-}
-
-.featured-article-big .featured-article-text .featured-article-title .author {
-  font-size: 1.125rem;
-}
-
-.featured-article-big .featured-article-text p {
-  color: #fefefe;
-  margin-bottom: 0;
-}
-
-.featured-article-small-container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 28.125rem;
-}
-
-.featured-article-small-container :last-child .featured-article-small {
-  border-bottom: 0;
-}
-
-.featured-article-small {
-  background: url("https://placehold.it/200?text=Small+Feature") no-repeat center center;
-  height: 9.375rem;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0.625rem;
-  border-bottom: 0.0625rem solid #fefefe;
-}
-
-.featured-article-small :last-child {
-  border-bottom: 0;
-}
-
-.featured-article-small .featured-article-text .featured-article-title {
-  font-size: 1rem;
-  font-weight: bold;
-  line-height: 0.9375rem;
-  max-height: 2.8125rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.featured-article-small .featured-article-text p {
-  color: #fefefe;
-  margin-bottom: 0;
-}
-
-.featured-article-links-container {
-  border: 0.0625rem solid #e6e6e6;
-  background-color: #fefefe;
-  height: 28.125rem;
-  overflow: scroll;
-}
-
-.featured-article-links,
-.featured-article-links-header {
-  padding: 0.625rem;
-  border-bottom: 0.0625rem solid #e6e6e6;
-}
-
-.featured-article-links:last-child,
-.featured-article-links-header:last-child {
-  border-bottom: 0;
-}
-
-.featured-article-links-header {
-  font-weight: 600;
-  text-transform: uppercase;
-} 
-

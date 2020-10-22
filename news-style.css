@@ -1,0 +1,280 @@
+/*Nav bar*/
+.subnav-hero-section {
+    text-align: center;
+    background: #354E6B;
+    background-size: cover;
+    position: relative;
+    overflow: visible;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  
+  }
+
+  /* Home, News, Jobs subtitles */
+.subnav-hero-section .subnav-hero-headline {
+    color: #fefefe;
+  }
+  
+  .subnav-hero-subnav {
+    float: none;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .subnav-hero-subnav li {
+    float: none;
+    display: inline-block;
+  }
+  
+  .subnav-hero-subnav li a {
+    padding: 0.9rem 1rem;
+    font-size: 0.75rem;
+    color: #fefefe;
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.35s ease-in-out;
+  }
+  
+  .subnav-hero-subnav li a.is-active {
+    background: rgba(254, 254, 254, 0.15);
+  }
+  
+  .subnav-hero-subnav li a:hover {
+    background: rgba(254, 254, 254, 0.15);
+  }
+
+  /* Pagination */
+.pagination-pointed .pagination-pointed-button, .pagination-pointed .current, .pagination-pointed .pagination-previous {
+    position: relative;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #2c3840;
+    color: #fff;
+    outline: 0;
+    text-decoration: none;
+    transition: all 0.2s linear;
+  }
+  
+  .pagination-pointed .pagination-pointed-button:hover, .pagination-pointed .current:hover, .pagination-pointed .pagination-previous:hover {
+    background-color: #41525e;
+  }
+  
+  .pagination-pointed .current {
+    background: dodgerblue;
+  }
+  
+  .pagination-pointed .current:hover {
+    background-color: #0077ea;
+  }
+  
+  .pagination-pointed .pagination-next a {
+    border-radius: 4px 0 0 4px;
+    margin-right: 18px;
+  }
+  
+  .pagination-pointed .pagination-next a:hover::after {
+    border-left: 17px solid #41525e;
+  }
+  
+  .pagination-pointed .pagination-next a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -18px;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 17px solid #2c3840;
+    transition: all 0.2s linear;
+  }
+  
+  .pagination-pointed .pagination-previous {
+    border-radius: 0 4px 4px 0;
+    margin-left: 18px;
+  }
+  
+  .pagination-pointed .pagination-previous:hover::after {
+    border-right: 17px solid #41525e;
+  }
+  
+  .pagination-pointed .pagination-previous::before {
+    content: "";
+  }
+  
+  .pagination-pointed .pagination-previous::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -18px;
+    width: 0;
+    height: 0;
+    border-bottom: 17px solid transparent;
+    border-top: 17px solid transparent;
+    border-right: 17px solid #2c3840;
+    transition: all 0.2s linear;
+  } 
+
+/* This is the article section */
+.article-row-section {
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .article-row-section-inner {
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    max-width: 100%;
+  }
+  
+  @media print, screen and (min-width: 40em) {
+    .article-row-section-inner {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem;
+    }
+  }
+  
+  @media print, screen and (min-width: 40em) {
+    .article-row-section-inner {
+      -webkit-flex: 0 0 83.33333%;
+          -ms-flex: 0 0 83.33333%;
+              flex: 0 0 83.33333%;
+      max-width: 83.33333%;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+      max-width: 83.33333%;
+    }
+  }
+  
+  @media print, screen and (min-width: 40em) and (min-width: 40em) {
+    .article-row-section-inner {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem;
+    }
+  }
+  
+  .article-row-section-header {
+    padding: 1.5rem 0;
+    margin: 0;
+    line-height: 1;
+  }
+  
+  .article-row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-top: 1px solid #e6e6e6;
+    padding: 1.5rem 0;
+  }
+  
+  @media print, screen and (min-width: 40em) {
+    .article-row {
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+    }
+  }
+  
+  .article-row-img img {
+    width: 100%;
+  }
+  
+  @media print, screen and (min-width: 40em) {
+    .article-row-img img {
+      max-width: none;
+      width: auto;
+    }
+  }
+  
+  .article-row-content {
+    padding: 1.5rem 0 0;
+    color: #0a0a0a;
+  }
+  
+  @media print, screen and (min-width: 40em) {
+    .article-row-content {
+      padding: 0 0 0 1.5rem;
+    }
+  }
+  
+  .article-row-content-header {
+    font-size: 1.5rem;
+  }
+  
+  .article-row-content-description {
+    font-size: 1.25rem;
+  }
+  
+  .article-row-content-author,
+  .article-row-content-time {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    color: #8a8a8a;
+  }
+  
+  .article-row-reversed .article-row-content {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 0 1.5rem 0 0;
+  }
+  
+  .article-row-reversed .article-row-img {
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 0 0 1.5rem 0;
+  }
+  
+  @media print, screen and (min-width: 40em) {
+    .article-row-reversed .article-row-content {
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1;
+    }
+    .article-row-reversed .article-row-img {
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2;
+    }
+  }
+  
+  
+  
