@@ -30,8 +30,8 @@ $(document).ready(function () {
                 // udate the news date
                 $('#date' + count).text(date);
                 // update the news image
-                $('#img'+ count).attr('src', articleImg);
-                $('#img'+ count).attr('alt', altImg);
+                $('#img' + count).attr('src', articleImg);
+                $('#img' + count).attr('alt', altImg);
                 // update the news link
                 $('#link' + count).attr('href', articleURL);
                 count++
@@ -44,6 +44,20 @@ $(document).ready(function () {
 
     // call displayArticles function
     displayArticles();
+
+
+    // API key for jobs
+    //var APIkeyJobs = 'c7ea2894becc4a46db14c94b17a22f43493277d5152dc255be9bc2e9f6c36a96';
+    // url
+    var jobQueryUrl = "https://www.themuse.com/api/public/jobs?category=Business%20%26%20Strategy&category=Creative%20%26%20Design&category=Data%20Science&category=Project%20%26%20Product%20Management&category=Social%20Media%20%26%20Community&page=5&descending=false";
+    $.ajax({
+        url: jobQueryUrl,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response.results);
+        // gets the name of the company
+        console.log(response.results[0].company.name);
+    })
 
     // end document.reday()
 });
