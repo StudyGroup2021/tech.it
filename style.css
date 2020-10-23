@@ -55,11 +55,10 @@
   background: rgba(254, 254, 254, 0.15);
 }
 
-
-
- /* News Hero Style */
-.marketing-site-hero{
-  background: url("news-hero.jpg") top right no-repeat;
+/* News hero */
+.marketing-site-hero {
+  background: url("pexels-lukas-317385.jpg") top right no-repeat;
+  border-top: 5px solid white;
   height: 65vh;
   background-size: cover;
   display: -webkit-flex;
@@ -77,14 +76,21 @@
 }
 
 .marketing-site-hero-content {
-  max-width: 75rem;
+  max-width: 100rem;
   margin: 0 auto;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 0%;
+  padding-right: 50%;
 }
 
 .marketing-site-hero-content h1 {
   font-size: 32px;
+  color: #354E6B;
+  font-weight: bolder;
+}
+
+.subheader {
+  color: white;
+  font-size: 24px;
 }
 
 .marketing-site-hero-content .button.round {
@@ -92,43 +98,72 @@
   text-transform: uppercase;
   font-size: 12px;
   margin-bottom: 0;
-  background-color:  #354E6B;
+  background-color: #354E6B;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 40em) {
   .marketing-site-hero-content {
-    padding-left: 50%;
+    padding-left: 20%;
   }
 }
 
+.quotes {
+  background-color: #354E6B;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  height: 500px;
+  width: 100%;
+}
 
-
- /* Jobs Hero Style */
-.hero-section {
-  background: url("jobs-hero.jpg") 50% no-repeat;
+/* Jobs hero */
+.marketing-site-hero-jobs {
+  background: url("pexels-александар-цветановић-1422286.jpg") top right no-repeat;
+  height: 65vh;
   background-size: cover;
-  height: 60vh;
-  text-align: center;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.hero-section .hero-section-text {
-  color: #fefefe;
-  text-shadow: 1px 1px 2px #0a0a0a;
+@media screen and (min-width: 40em) {
+  .marketing-site-hero-jobs {
+    background-position: center center;
+  }
 }
 
-.button.round {
+.marketing-site-hero-content-jobs {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding-left: 60%;
+  padding-right: 0%;
+}
+
+.marketing-site-hero-content-jobs h1 {
+  font-size: 32px;
+  color: #354E6B;
+  font-weight: bolder;
+}
+
+.subheader {
+  color: white;
+  font-size: 24px;
+}
+
+.marketing-site-hero-content-jobs .button.round {
   border-radius: 5000px;
   text-transform: uppercase;
   font-size: 12px;
   margin-bottom: 0;
-  background-color:  #354E6B;;
+  background-color: #354E6B;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 40em) {
+  .marketing-site-hero-content-jobs {
+    padding-right: 10%;
+  }
 }
