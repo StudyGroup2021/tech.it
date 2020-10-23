@@ -12,9 +12,21 @@ $.ajax({
     var title = response.results[3].title;
     var description = response.results[3].abstract;
     var author = response.results[3].byline;
+    var date = response.results[3].updated_date
     var articleURL = response.results[3].url;
+    $('#title1').text(title);
+    $('#description1').text(description);
+    $('#author1').text(author);
+    $('#date1').text(date);
+    clickArticle(articleURL)
+    console.log(articleURL);
 });
 
 
 // end
 });
+function clickArticle(articleURL) {
+$('.article-row-content').on('click', function() {
+    $('#link1').attr('href', articleURL);
+    console.log('articleURL' + articleURL)
+})}
