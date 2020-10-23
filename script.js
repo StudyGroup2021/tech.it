@@ -23,20 +23,23 @@ $.ajax({
     var article = response.results.length
         var count = 0
         for (let i = 0; i < article - 26; i++) {
-            var articleTitle = response.results[count].title
-            $('.article-row-content-header').text(articleTitle)
-            
+            console.log('before' + count)
+            var articleTitle = response.results[i].title
+            $('#title' + count).text(articleTitle)
+            count++
+            console.log('after' + count)
         }
 }
 )}
 displayArticles()
+
+// function clickArticle(articleURL) {
+//     $('.article-row-content').on('click', function() {
+//         $('#link1').attr('href', articleURL);
+//         console.log('articleURL' + articleURL)
+//     })}
+    
+    
+    
 // end
-function clickArticle(articleURL) {
-    $('.article-row-content').on('click', function() {
-        $('#link1').attr('href', articleURL);
-        console.log('articleURL' + articleURL)
-    })}
-    
-    
-    
 });
