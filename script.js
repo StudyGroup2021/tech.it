@@ -11,17 +11,16 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response);
-            var article = response.results.length
+            var article = response.results.length;
             var count = 0
-            for (let i = 0; i < article - 26; i++) {
+            for (let i = 0; i < article - 21; i++) {
                 var articleTitle = response.results[i].title
                 var description = response.results[i].abstract;
                 var author = response.results[i].byline;
                 var date = response.results[i].updated_date;
                 var articleURL = response.results[i].url;
-                var articleImg = response.results[i].multimedia[4].url
-                console.log(articleImg);
+                var articleImg = response.results[i].multimedia[4].url;
+                var altImg = response.results[i].multimedia[4].caption;
                 // update the news title
                 $('#title' + count).text(articleTitle);
                 // update the news description
@@ -32,6 +31,7 @@ $(document).ready(function () {
                 $('#date' + count).text(date);
                 // update the news image
                 $('#img'+ count).attr('src', articleImg);
+                $('#img'+ count).attr('alt', altImg);
                 // update the news link
                 $('#link' + count).attr('href', articleURL);
                 count++
