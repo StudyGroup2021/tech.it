@@ -21,18 +21,18 @@ $.ajax({
             $('#description' + count).text(description);
             $('#author' + count).text(author);
             $('#date' + count).text(date);
+            $('#link' + count).attr('href', articleURL);
             count++
             //end for loop    
         }
     clickArticle(articleURL) 
 //end .then()
 })
-function clickArticle(articleURL) {
-    $('.article-row-content').on('click', function() {
-        $('#link').attr('href', articleURL);
-        console.log('articleURL' + articleURL)
-    })}
-
+//function clickArticle(articleURL) {
+   // $('.article-row-content').on('click', function() {
+        //$('#link').attr('href', articleURL);
+       // console.log('articleURL' + articleURL)
+   //
 //end displayAnswers()
 }
 displayArticles()
