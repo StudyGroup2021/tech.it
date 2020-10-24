@@ -383,3 +383,8 @@
   border-radius: 5000px;
   font-weight: bold;
 }
+
+.copyRight {
+  text-align: center;
+  color: #fefefe;
+}
