@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="style.css" type="text/css">      
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"/>
   <title>Tech.It</title>
 </head>
 
@@ -22,7 +26,7 @@
       <!--link for news-->
       <li><a href="news-index.html">News</a></li>
       <!--link for Jobs-->
-      <li><a href="https://zurb.com/responsive">Jobs</a></li>
+      <li><a href="jobs-index.html">Jobs</a></li>
     </ul>
   </header>
 
@@ -30,14 +34,27 @@
   <div class="marketing-site-hero">
     <div class="marketing-site-hero-content">
       <h1>Stay in Touch in a Touchless World</h1>
-      <p class="subheader">Visit our news page to stay up-to-date on the latest happenings in the software industry!</p>
+      <p class="subheader">Visit our news page to stay up-to-date on the latest happenings in the tech industry!</p>
       <a href="#" class="round button">learn more</a>
     </div>
   </div>
 
+  <!-- Start quotes div -->
   <div class="quotes">
-
+    <div class="testimonial-block-vertical">
+      <div class="testimonial-block-vertical-quote">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.</p>
+      </div>
+      <div class="testimonial-block-vertical-person">
+        <img class="testimonial-block-vertical-avatar" src="https://placehold.it/60" alt="" />
+        <div>
+          <p class="testimonial-block-vertical-name">John Doe</p>
+          <p class="testimonial-block-vertical-info">Important person, some Company</p>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- End quotes div -->  
 
   <!-- End news hero -->
   <div class="marketing-site-hero-jobs">
@@ -51,53 +68,46 @@
   <!-- Footer -->
   <div class="three-column-footer-contact-form-container">
     <footer class="three-column-footer-contact-form" data-equalizer data-equalize-by-row="true">
+      
       <div class="footer-left" data-equalizer-watch>
+        <div class="baseline">
+          <div class="newsletter">
+            <h6>Subscribe to Our Newsletter</h6>
+            <div class="input-group">
+              <input class="input-group-field" type="email" placeholder="Email address">
+            </div>
+            <a class="button expanded" href="#">Submit</a>
+          </div>
+        </div>
+       </div>
+
+       <div class="footer-center" data-equalizer-watch>
         <div class="baseline">
           <div class="logo-details">
             <img src="logo_transparent.png">
           </div>
         </div>
-       </div>
-      <div class="footer-center" data-equalizer-watch>
-        <div class="baseline">
-          <div class="newsletter">
-            <h6>Contact form</h6>
-            <div class="input-group">
-              <input class="input-group-field" type="text" placeholder="Name">
-              <input class="input-group-field" type="email" placeholder="Email address">
-              <textarea placeholder="Message"></textarea>
-            </div>
-            <a class="button expanded" href="#">SUBMIT</a>
-          </div>
-        </div>
       </div>
+      
       <div class="footer-right" data-equalizer-watch>
         <div class="baseline">
           <h6>Development Team:</h6>
           <div class="row">
             <div class="col-sm-6">
-              <ul>Muneed Ali <a href="#"> <img src="linkedin (1).svg" alt="LinkedIn"> </a> <a href="#"> <img src="github (1).svg" alt="Github"> </a> </ul>
-              <ul>Marlee Eyre <a href="https://www.linkedin.com/in/marlee-eyre-cnmt-b4919686/"> <img src="linkedin (1).svg" alt="LinkedIn"> </a> <a href="https://github.com/mpeyre93"> <img src="github (1).svg" alt="Github"> </a> </ul>
-              <ul>Pierce Rogg <a href="#"> <img src="linkedin (1).svg" alt="LinkedIn"> </a> <a href="#"> <img src="github (1).svg" alt="Github"> </a></ul>
+              <ul><i class="fab fa-linkedin"></i> <i class="fab fa-github"></i> Muneeb Ali</ul>
+              <ul><i class="fab fa-linkedin"></i> <i class="fab fa-github"></i> Marlee Eyre</ul>
+              <ul><i class="fab fa-linkedin"></i> <i class="fab fa-github"></i> Pierce Rogg</ul>
             </div>
             <div class="col-sm-6">
-              <ul>Enxhi Salaj <a href="#"> <img src="linkedin (1).svg" alt="LinkedIn"> </a> <a href="#"> <img src="github (1).svg" alt="Github"> </a></ul>
-              <ul>Alex Tatum <a href="#"> <img src="linkedin (1).svg" alt="LinkedIn"> </a> <a href="#"> <img src="github (1).svg" alt="Github"> </a></ul>
-              <ul>Megan Carnaghi <a href="#"> <img src="linkedin (1).svg" alt="LinkedIn"> </a> <a href="#"> <img src="github (1).svg" alt="Github"> </a></ul>
+              <ul><i class="fab fa-linkedin"></i> <i class="fab fa-github"></i> Enxhi Salaj</ul>
+              <ul><i class="fab fa-linkedin"></i> <i class="fab fa-github"></i> Alex Tatum</ul>
+              <ul><i class="fab fa-linkedin"></i> <i class="fab fa-github"></i> Megan Carnaghi</ul>
             </div>
           </div>
         </div>
       </div>
     </footer>
-
-    <div class="row-legal">
-      <p class="copyRight">&copy 2020 Tech.IT. All rights reserved.</p>
-    </div>
   </div>
-  
-  
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
     integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
