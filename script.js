@@ -3,35 +3,35 @@ $(document).ready(function() {
     quoteList = [
         {
             quote: "\"Don't worry if it doesn't work right.  If everything did, you'd be out of a job.\"",
-            author: "- Mosher's Law of Software Engineering"
+            author: "-Mosher's Law of Software Engineering"
         },
         {
             quote: "\"Measuring programming progress by lines of code is like measuring aircraft building progress by weight.\"",
-            author: "Bill Gates"
+            author: "-Bill Gates"
         },
         {
-            quote: "\"Good code is its own best documentation.",
-            author: "Steve McConnell"
+            quote: "\"Good code is its own best documentation.\"",
+            author: "-Steve McConnell"
         },
         {
             quote: "\"That's the thing about people who think they hate computers. What they really hate are lousy programmers.\"",
-            author: "Larry Niven"
+            author: "-Larry Niven"
         },
         {
             quote: "\"Everyone in this country should learn to program a computer... because it teaches you how to think.\"",
-            author: "Steve Jobs"
+            author: "-Steve Jobs"
         },
         {
             quote: "\"Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.\"",
-            author: "Stephen Hawking"
+            author: "-Stephen Hawking"
         },
         {
             quote: "\"Any fool can write code that a computer can understand. Good programmers write code that humans can understand.\"",
-            author: "Martin Fowler"
+            author: "-Martin Fowler"
         }];
 
-        var quoteP = $("<p>").addClass("class = 'quote-text'");
-        var authorP = $("<p>").addClass("class = 'quote-author'");
+        var quoteP = $("<p>").addClass("quote-text");
+        var authorP = $("<p>").addClass("quote-author");
 
         var i = 0;
 
@@ -57,9 +57,9 @@ $(document).ready(function() {
         //console.log(quoteList);
         
         $(quoteP).text(quoteList[i++].quote);
-        $('.quotes').append(quoteP)
+        $('.quote-text').append(quoteP)
         $(authorP).text(quoteList[i++].author);
-        $('.quotes').append(authorP)
+        $('.quote-author').append(authorP)
             
         setInterval(quoteTimer, 6000);
        
