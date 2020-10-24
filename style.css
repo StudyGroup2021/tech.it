@@ -233,6 +233,11 @@
 }
 
 /* Styling fo the Footer */
+
+.newsletter h6 {
+  font-weight: bold;
+}
+
 .three-column-footer-contact-form-container {
   background-color: #354E6B;
   height: 400px;
@@ -244,7 +249,6 @@
   margin-right: auto;
   margin-left: auto;
   color: #ffffff;
-  padding: 30px;
 }
 
 .three-column-footer-contact-form-container .three-column-footer-contact-form::before, .three-column-footer-contact-form-container .three-column-footer-contact-form::after {
@@ -272,6 +276,7 @@
   padding-right: 0.625rem;
   padding-left: 0.625rem;
   display: table;
+  padding-top: 8rem;
 }
 
 .three-column-footer-contact-form-container .three-column-footer-contact-form .footer-left .baseline {
@@ -280,7 +285,7 @@
 }
 
 .three-column-footer-contact-form-container .three-column-footer-contact-form .footer-left .input-group {
-  padding: 1rem 0 0 0;
+  padding: 5px 0 0 0;
 }
 
 .three-column-footer-contact-form-container .three-column-footer-contact-form .footer-left .input-group input {
@@ -388,6 +393,7 @@
   padding-right: 0.625rem;
   padding-left: 0.625rem;
   display: table;
+  padding-top: 50px;
 }
 
 .three-column-footer-contact-form-container .three-column-footer-contact-form .footer-right .baseline {
@@ -397,6 +403,10 @@
 
 .three-column-footer-contact-form-container .three-column-footer-contact-form .footer-right h2 {
   color: #ffffff;
+}
+
+.footer-right h6 {
+  font-weight: bold;
 }
 
 .three-column-footer-contact-form-container .three-column-footer-contact-form .footer-right p {
@@ -445,7 +455,9 @@
   background-color: #3CA8B4;
   color: #ffffff;
   border-radius: 5000px;
+  padding: 10px 10px;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .copyRight {
