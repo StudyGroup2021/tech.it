@@ -1,4 +1,69 @@
 $(document).ready(function () {
+
+    // quotes list of quote and author
+    quoteList = [
+        {
+            quote: "Don't worry if it doesn't work right.  If everything did, you'd be out of a job.",
+            author: "(Mosher's Law of Software Engineering)"
+        },
+        {
+            quote: "Measuring programming progress by lines of code is like measuring aircraft building progress by weight.",
+            author: "(Bill Gates)"
+        },
+        {
+            quote: "Good code is its own best documentation.",
+            author: "(Steve McConnell)"
+        },
+        {
+            quote: "That's the thing about people who think they hate computers. What they really hate are lousy programmers.",
+            author: "(Larry Niven)"
+        },
+        {
+            quote: "Everyone in this country should learn to program a computer... because it teaches you how to think.",
+            author: "(Steve Jobs)"
+        },
+        {
+            quote: "Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.",
+            author: "(Stephen Hawking)"
+        },
+        {
+            quote: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+            author: "(Martin Fowler)"
+        }];
+
+    function displayQuotes() {
+
+        for (var i = 0; i < quoteList.length; i++) {
+            $(".quotes").empty();
+            var quoteP = $("<p>").addClass("class = 'quote-text'");
+            $(quoteP).append(quoteList[i].quote);
+            $(".quotes").append(quoteP);
+            
+            console.log(quoteList[i].quote);
+            var authorP = $("<p>").addClass("class = 'quote-author'");
+            $(authorP).append(quoteList[i].author);
+            $(".quotes").append(authorP);
+            
+
+        }
+    }
+
+    // timer function 
+    function setTimer() {
+        var count = 120;
+        var interval = setInterval(function () {
+            displayQuotes();
+            count--;
+            if (count === 0) {
+                clearInterval(interval);
+            }
+        }, 1000);
+    }
+
+
+
+
+
     // function displays articles in page
     function displayArticles() {
         // API key
@@ -14,9 +79,9 @@ $(document).ready(function () {
             var article = response.results.length;
             var count = 0
             for (let i = 0; i < article - 21; i++) {
-                // In case news has no image, skip the news 
+                // In case news has no image, skip the news
                 // add the length of the list to continue display 8 articles
-                if(response.results[i].multimedia === null){
+                if (response.results[i].multimedia === null) {
                     i++;
                     article++;
                 }
@@ -41,29 +106,37 @@ $(document).ready(function () {
                 // update the news link
                 $('#link' + count).attr('href', articleURL);
                 count++
-                //end for loop    
+                //end for loop
             }
             //end .then()
         });
         //end displayAnswers()
     }
 
+
+    function displayJobs() {
+        // API key for jobs
+        //var APIkeyJobs = 'c7ea2894becc4a46db14c94b17a22f43493277d5152dc255be9bc2e9f6c36a96';
+        // url
+        var jobQueryUrl = "https://www.themuse.com/api/public/jobs?category=Business%20%26%20Strategy&category=Creative%20%26%20Design&category=Data%20Science&category=Project%20%26%20Product%20Management&category=Social%20Media%20%26%20Community&page=5&descending=false";
+        $.ajax({
+            url: jobQueryUrl,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response.results);
+            // gets the name of the company
+            console.log(response.results[0].company.name);
+        });
+    }
+
     // call displayArticles function
     displayArticles();
-
-
-    // API key for jobs
-    //var APIkeyJobs = 'c7ea2894becc4a46db14c94b17a22f43493277d5152dc255be9bc2e9f6c36a96';
-    // url
-    var jobQueryUrl = "https://www.themuse.com/api/public/jobs?category=Business%20%26%20Strategy&category=Creative%20%26%20Design&category=Data%20Science&category=Project%20%26%20Product%20Management&category=Social%20Media%20%26%20Community&page=5&descending=false";
-    $.ajax({
-        url: jobQueryUrl,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response.results);
-        // gets the name of the company
-        console.log(response.results[0].company.name);
-    })
+    // call display jobs
+    displayJobs();
+    //call displayQuotes
+    //displayQuotes();
+    // call timer
+    setTimer();
 
     // end document.reday()
 });
