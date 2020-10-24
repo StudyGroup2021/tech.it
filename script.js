@@ -1,5 +1,4 @@
-$(document).ready(function () {
-
+$(document).ready(function() {
     // quotes list of quote and author
     quoteList = [
         {
@@ -31,34 +30,45 @@ $(document).ready(function () {
             author: "(Martin Fowler)"
         }];
 
-    function displayQuotes() {
+        var quoteP = $("<p>").addClass("class = 'quote-text'");
+        var authorP = $("<p>").addClass("class = 'quote-author'");
 
-        for (var i = 0; i < quoteList.length; i++) {
-            $(".quotes").empty();
-            var quoteP = $("<p>").addClass("class = 'quote-text'");
-            $(quoteP).append(quoteList[i].quote);
-            $(".quotes").append(quoteP);
-            
-            console.log(quoteList[i].quote);
-            var authorP = $("<p>").addClass("class = 'quote-author'");
-            $(authorP).append(quoteList[i].author);
-            $(".quotes").append(authorP);
-            
+        var i = 0;
 
-        }
-    }
-
-    // timer function 
-    function setTimer() {
-        var count = 120;
-        var interval = setInterval(function () {
-            displayQuotes();
-            count--;
-            if (count === 0) {
-                clearInterval(interval);
+        var quoteTimer = function() {
+            if (i == quoteList.length-1) {
+                i = 0;
+                console.log('works')
             }
-        }, 1000);
-    }
+            $(quoteP).fadeOut(1000, function(){
+                $(this).text(quoteList[i].quote);
+                
+            });
+            $(quoteP).fadeIn();
+            
+
+            $(authorP).fadeOut(1000, function(){
+                $(this).text(quoteList[i].author);
+                
+            });
+            $(authorP).fadeIn();
+            i++;
+        }
+        //console.log(quoteList);
+        
+        $(quoteP).text(quoteList[i++].quote);
+        $('.quotes').append(quoteP)
+        $(authorP).text(quoteList[i++].author);
+        $('.quotes').append(authorP)
+            
+        setInterval(quoteTimer, 6000);
+       
+        
+
+           
+        
+    // timer function 
+  
 
 
 
@@ -136,7 +146,7 @@ $(document).ready(function () {
     //call displayQuotes
     //displayQuotes();
     // call timer
-    setTimer();
-
+    quoteTimer();
+    
     // end document.reday()
 });
