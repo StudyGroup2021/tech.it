@@ -30,24 +30,36 @@ $(document).ready(function() {
             author: "(Martin Fowler)"
         }];
 
+        var quoteP = $("<p>").addClass("class = 'quote-text'");
+        var authorP = $("<p>").addClass("class = 'quote-author'");
+
         var i = 0;
 
         var quoteTimer = function() {
-            if (i > quoteList.length) {
+            if (i == quoteList.length-1) {
                 i = 0;
+                console.log('works')
             }
-            $('.quote').fadeOut(1000, function(){
+            $(quoteP).fadeOut(1000, function(){
                 $(this).text(quoteList[i].quote);
+                
+            });
+            $(quoteP).fadeIn();
+            
+
+            $(authorP).fadeOut(1000, function(){
                 $(this).text(quoteList[i].author);
                 
             });
-            $('.quotes').fadeIn();
+            $(authorP).fadeIn();
             i++;
         }
-        console.log(quoteList);
+        //console.log(quoteList);
         
-        $('.quotes').text(quoteList[i++].quote);
-        $('.quotes').text(quoteList[i++].author);
+        $(quoteP).text(quoteList[i++].quote);
+        $('.quotes').append(quoteP)
+        $(authorP).text(quoteList[i++].author);
+        $('.quotes').append(authorP)
             
         setInterval(quoteTimer, 6000);
        
