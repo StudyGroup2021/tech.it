@@ -123,8 +123,8 @@
   padding: 1rem;
   border-radius: 5px;
   margin-bottom: 1.875rem;
-  margin-top: 150px;
-  margin-left: 500px;
+  margin-top: 125px;
+  margin-left: 550px;
   position: relative;
 }
 
@@ -137,8 +137,6 @@
 .quote-author {
   text-transform: uppercase;
   font-weight: 600;
-  margin-top: 8px;
-  margin-left: 244px;
   color: #ffffff;
 }
 
@@ -146,7 +144,7 @@
   color: #ffffff;
   background-color: #CCCCCC;
   margin-top: 5px;
-  margin-left: 511px;
+  margin-left: 561px;
   border: 2px solid #ffffff;
   padding: 15px 20px;
   border-radius: 50%;
@@ -163,9 +161,6 @@
   border-color: #3CA8B4 transparent transparent transparent;
   position: absolute;
 }
-
-
-
 
 /* Jobs hero */
 .marketing-site-hero-jobs {
