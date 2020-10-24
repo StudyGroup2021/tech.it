@@ -14,6 +14,12 @@ $(document).ready(function () {
             var article = response.results.length;
             var count = 0
             for (let i = 0; i < article - 21; i++) {
+                // In case news has no image, skip the news 
+                // add the length of the list to continue display 8 articles
+                if(response.results[i].multimedia === null){
+                    i++;
+                    article++;
+                }
                 var articleTitle = response.results[i].title
                 var description = response.results[i].abstract;
                 var author = response.results[i].byline;
