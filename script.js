@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    // create a email submission list
+    var emailHistory = JSON.parse(window.localStorage.getItem("submit")) || [];
     // quotes list of quote and author
     quoteList = [
         {
@@ -35,29 +37,32 @@ $(document).ready(function () {
     var i = 0;
     // fade in and out quotes with authors in the ".quotes" div    
     var quoteTimer = function () {
+        // set index 0 so that list starts from beginning
         if (i == quoteList.length - 1) {
             i = 0;
-           //console.log('works')
         }
+        // quote text fades out
         $(quoteP).fadeOut(1000, function () {
             $(this).text(quoteList[i].quote);
 
         });
+        // quote text fades in
         $(quoteP).fadeIn();
-
-
+        // author fades out
         $(authorP).fadeOut(1000, function () {
             $(this).text(quoteList[i].author);
 
         });
+        // author fades in
         $(authorP).fadeIn();
+        // increment i
         i++;
     }
     // add quotes on page
     $(quoteP).text(quoteList[i++].quote);
-    $('.quote-text').append(quoteP)
+    $('.quote-text').append(quoteP);
     $(authorP).text(quoteList[i++].author);
-    $('.quote-author').append(authorP)
+    $('.quote-author').append(authorP);
     // set interval and make appear each quote for 6 sec
     setInterval(quoteTimer, 6000);
 
@@ -65,7 +70,7 @@ $(document).ready(function () {
     // function displays articles in page
     function displayArticles() {
         // API key
-        var APIKey = 'Y7bWWVONOPeRUHMryrKxY4TiGIWIKQMQ'
+        var APIKey = 'Y7bWWVONOPeRUHMryrKxY4TiGIWIKQMQ';
         // query url link
         var queryURL = "https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=" + APIKey;
 
@@ -75,7 +80,7 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             var article = response.results.length;
-            var count = 0
+            var count = 0;
             for (let i = 0; i < article - 21; i++) {
                 // In case news has no image, skip the news
                 // add the length of the list to continue display 8 articles
@@ -83,7 +88,8 @@ $(document).ready(function () {
                     i++;
                     article++;
                 }
-                var articleTitle = response.results[i].title
+                // get data from the API
+                var articleTitle = response.results[i].title;
                 var description = response.results[i].abstract;
                 var author = response.results[i].byline;
                 var date = response.results[i].updated_date;
@@ -97,6 +103,7 @@ $(document).ready(function () {
                 var articleURL = response.results[i].url;
                 var articleImg = response.results[i].multimedia[4].url;
                 var altImg = response.results[i].multimedia[4].caption;
+                // assign date to the html
                 // update the news title
                 $('#title' + count).text(articleTitle);
                 // update the news description
@@ -124,27 +131,30 @@ $(document).ready(function () {
         //var APIkeyJobs = 'c7ea2894becc4a46db14c94b17a22f43493277d5152dc255be9bc2e9f6c36a96';
         // url
         var jobQueryUrl = "https://www.themuse.com/api/public/jobs?category=Business%20%26%20Strategy&category=Creative%20%26%20Design&category=Data%20Science&category=Project%20%26%20Product%20Management&category=Social%20Media%20%26%20Community&page=5&descending=false";
+       
+        // ajax call for the url
         $.ajax({
             url: jobQueryUrl,
             method: "GET"
         }).then(function (response) {
             console.log(response.results);
             var jobs = response.results.length;
-            var count = 0
+            var count = 0;
             for (let i = 0; i < jobs - 12; i++) {
-                // accept job locations in the US and remote
-                if (response.results[i].locations[0].name.includes(" Canada") 
-                || response.results[i].locations[0].name.includes(" China")
-                || response.results[i].locations[0].name.includes(" South Korea")
-                || response.results[i].locations[0].name.includes(" Luxembourg")
-                || response.results[i].locations[0].name.includes(" Germany")){
+                // accept job locations that do not inlcude these countries (that mean states in the US and remote will be accepted)
+                if (response.results[i].locations[0].name.includes(" Canada")
+                    || response.results[i].locations[0].name.includes(" China")
+                    || response.results[i].locations[0].name.includes(" South Korea")
+                    || response.results[i].locations[0].name.includes(" Luxembourg")
+                    || response.results[i].locations[0].name.includes(" Germany")) {
                     i++;
-                    jobs++;   
+                    jobs++;
                 }
-                var companyName = response.results[i].company.name
+                // get data from the api
+                var companyName = response.results[i].company.name;
                 var jobDescr = response.results[i].name;
                 var jobLocation = response.results[i].locations[0].name;
-                console.log(jobLocation)
+                //console.log(jobLocation)
                 var publishDate = response.results[i].publication_date;
                 // format the date 
                 var pDate = new Date(Date.parse(publishDate));
@@ -154,6 +164,7 @@ $(document).ready(function () {
                 var datePubl = month + "/" + date + "/" + year;
                 //
                 var jobUrl = response.results[i].refs.landing_page;
+                // assign data to the html
                 // update the job title
                 $('#job-title' + count).text(companyName);
                 // update the job description
@@ -170,6 +181,17 @@ $(document).ready(function () {
             //end .then()
         });
     }
+
+    // save in local storage emails put in the form
+    // when click the button submit
+    $("#submit-btn").on("click", function(){
+        var submit = $("#email").val();
+        console.log(submit);
+        emailHistory.push(submit);
+        localStorage.setItem("submit", emailHistory);
+        // clear input
+        $("#email").val("");
+    });
 
     // function calls
     // call displayArticles function
