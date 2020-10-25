@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // quotes list of quote and author
     quoteList = [
         {
@@ -29,49 +29,37 @@ $(document).ready(function() {
             quote: "\"Any fool can write code that a computer can understand. Good programmers write code that humans can understand.\"",
             author: "-Martin Fowler"
         }];
-
-        var quoteP = $("<p>").addClass("quote-text");
-        var authorP = $("<p>").addClass("quote-author");
-
-        var i = 0;
-
-        var quoteTimer = function() {
-            if (i == quoteList.length-1) {
-                i = 0;
-                console.log('works')
-            }
-            $(quoteP).fadeOut(1000, function(){
-                $(this).text(quoteList[i].quote);
-                
-            });
-            $(quoteP).fadeIn();
-            
-
-            $(authorP).fadeOut(1000, function(){
-                $(this).text(quoteList[i].author);
-                
-            });
-            $(authorP).fadeIn();
-            i++;
+    // create <p> elements for quotes and author
+    var quoteP = $("<p>").addClass("quote-text");
+    var authorP = $("<p>").addClass("quote-author");
+    var i = 0;
+    // fade in and out quotes with authors in the ".quotes" div    
+    var quoteTimer = function () {
+        if (i == quoteList.length - 1) {
+            i = 0;
+           //console.log('works')
         }
-        //console.log(quoteList);
-        
-        $(quoteP).text(quoteList[i++].quote);
-        $('.quote-text').append(quoteP)
-        $(authorP).text(quoteList[i++].author);
-        $('.quote-author').append(authorP)
-            
-        setInterval(quoteTimer, 6000);
-       
-        
+        $(quoteP).fadeOut(1000, function () {
+            $(this).text(quoteList[i].quote);
 
-           
-        
-    // timer function 
-  
+        });
+        $(quoteP).fadeIn();
 
 
+        $(authorP).fadeOut(1000, function () {
+            $(this).text(quoteList[i].author);
 
+        });
+        $(authorP).fadeIn();
+        i++;
+    }
+    // add quotes on page
+    $(quoteP).text(quoteList[i++].quote);
+    $('.quote-text').append(quoteP)
+    $(authorP).text(quoteList[i++].author);
+    $('.quote-author').append(authorP)
+    // set interval and make appear each quote for 6 sec
+    setInterval(quoteTimer, 6000);
 
 
     // function displays articles in page
@@ -123,7 +111,7 @@ $(document).ready(function() {
         //end displayAnswers()
     }
 
-
+    // function that displays new jobs on page
     function displayJobs() {
         // API key for jobs
         //var APIkeyJobs = 'c7ea2894becc4a46db14c94b17a22f43493277d5152dc255be9bc2e9f6c36a96';
@@ -134,19 +122,38 @@ $(document).ready(function() {
             method: "GET"
         }).then(function (response) {
             console.log(response.results);
-            // gets the name of the company
-            console.log(response.results[0].company.name);
+            var jobs = response.results.length;
+            var count = 0
+            for (let i = 0; i < jobs - 12; i++) {
+                var companyName = response.results[i].company.name
+                var jobDescr = response.results[i].name;
+                var jobLocation = response.results[i].locations[0].name;
+                var publishDate = response.results[i].publication_date;
+                var jobUrl = response.results[i].refs.landing_page;
+                // update the job title
+                $('#job-title' + count).text(companyName);
+                // update the job description
+                $('#job-description' + count).text(jobDescr);
+                // update the job location
+                $('#job-location' + count).text(jobLocation);
+                // udate the job published date
+                $('#job-date' + count).text(publishDate);
+                // update the job link
+                $('#job-link' + count).attr('href', jobUrl);
+                count++
+                //end for loop
+            }
+            //end .then()
         });
     }
 
+    // function calls
     // call displayArticles function
     displayArticles();
     // call display jobs
     displayJobs();
-    //call displayQuotes
-    //displayQuotes();
     // call timer
     quoteTimer();
-    
+
     // end document.reday()
 });
