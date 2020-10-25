@@ -87,6 +87,13 @@ $(document).ready(function () {
                 var description = response.results[i].abstract;
                 var author = response.results[i].byline;
                 var date = response.results[i].updated_date;
+                // format news date
+                var newsDate = new Date(Date.parse(date));
+                var d = newsDate.getDate();
+                var m = newsDate.getMonth();
+                var y = newsDate.getUTCFullYear();
+                var pDate = m + "/" + d + "/" + y;
+                //
                 var articleURL = response.results[i].url;
                 var articleImg = response.results[i].multimedia[4].url;
                 var altImg = response.results[i].multimedia[4].caption;
@@ -97,7 +104,7 @@ $(document).ready(function () {
                 // update the news author
                 $('#author' + count).text(author);
                 // udate the news date
-                $('#date' + count).text(date);
+                $('#date' + count).text(pDate);
                 // update the news image
                 $('#img' + count).attr('src', articleImg);
                 $('#img' + count).attr('alt', altImg);
@@ -125,10 +132,27 @@ $(document).ready(function () {
             var jobs = response.results.length;
             var count = 0
             for (let i = 0; i < jobs - 12; i++) {
+                // accept job locations in the US and remote
+                if (response.results[i].locations[0].name.includes(" Canada") 
+                || response.results[i].locations[0].name.includes(" China")
+                || response.results[i].locations[0].name.includes(" South Korea")
+                || response.results[i].locations[0].name.includes(" Luxembourg")
+                || response.results[i].locations[0].name.includes(" Germany")){
+                    i++;
+                    jobs++;   
+                }
                 var companyName = response.results[i].company.name
                 var jobDescr = response.results[i].name;
                 var jobLocation = response.results[i].locations[0].name;
+                console.log(jobLocation)
                 var publishDate = response.results[i].publication_date;
+                // format the date 
+                var pDate = new Date(Date.parse(publishDate));
+                var date = pDate.getDate();
+                var month = pDate.getMonth();
+                var year = pDate.getUTCFullYear();
+                var datePubl = month + "/" + date + "/" + year;
+                //
                 var jobUrl = response.results[i].refs.landing_page;
                 // update the job title
                 $('#job-title' + count).text(companyName);
@@ -137,7 +161,7 @@ $(document).ready(function () {
                 // update the job location
                 $('#job-location' + count).text(jobLocation);
                 // udate the job published date
-                $('#job-date' + count).text(publishDate);
+                $('#job-date' + count).text(datePubl);
                 // update the job link
                 $('#job-link' + count).attr('href', jobUrl);
                 count++
