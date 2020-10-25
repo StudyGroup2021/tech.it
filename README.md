@@ -12,6 +12,11 @@ Website dedicated to technology news and jobs.
 * When entering email in the footer input field, the user is able to submit the email and emails are stored in local storage
 * In the development team section of the footer, each developer has linkedIn and gitHub logos assigned, which sends you to each developer's profile in these medias
 
+## Technology used
+* Foundation : https://get.foundation/templates.html
+* News API: https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=ApiKey
+* Jobs API: https://www.themuse.com/api/public/jobs?category=Business%20%26%20Strategy&category=Creative%20%26%20Design&category=Data%20Science&category=Project%20%26%20Product%20Management&category=Social%20Media%20%26%20Community&page=5&descending=false
+       
 ## Image
 
 ## Link
