@@ -18,6 +18,7 @@ Website dedicated to technology news and jobs.
 * Jobs API: https://www.themuse.com/api/public/jobs?category=Business%20%26%20Strategy&category=Creative%20%26%20Design&category=Data%20Science&category=Project%20%26%20Product%20Management&category=Social%20Media%20%26%20Community&page=5&descending=false
        
 ## Image
+[Tech.ITScreenshot](Tech.ITScreenshot.png)
 
 ## Link
 
