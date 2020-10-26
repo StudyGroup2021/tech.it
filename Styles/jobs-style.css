@@ -168,32 +168,6 @@
   color: #8a8a8a;
 }
 
-.article-row-reversed .article-row-content {
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2;
-  padding: 0 1.5rem 0 0;
-}
-
-.article-row-reversed .article-row-img {
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1;
-  padding: 0 0 1.5rem 0;
-}
-
-@media print, screen and (min-width: 40em) {
-  .article-row-reversed .article-row-content {
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .article-row-reversed .article-row-img {
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-}
 /* Styling fo the Footer */
 
 .newsletter h6 {
