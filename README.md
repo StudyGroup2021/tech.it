@@ -22,8 +22,8 @@ Website dedicated to technology news and jobs.
 
 
 ## Links
-GitHub Repository: https://github.com/StudyGroup2021/tech.it.git
-GitHub Pages: https://studygroup2021.github.io/tech.it/index.html
+* GitHub Repository: https://github.com/StudyGroup2021/tech.it.git
+* GitHub Pages: https://studygroup2021.github.io/tech.it/index.html
 
 ## Development Team
 
