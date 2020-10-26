@@ -19,9 +19,6 @@ Website dedicated to technology news and jobs.
        
 ## Image
 ![Tech.ITScreenshot](Tech.ITScreenshot.png)
-![Tech.ITFooterScreenshot](Tech.ITFooterScreenshot.png)
-![Tech.ITJobsScreenshot](Tech.ITJobsScreenshot.png)
-![Tech.ITNewsScreenshot](Tech.ITNewsScreenshot.png)
 
 
 ## Links
