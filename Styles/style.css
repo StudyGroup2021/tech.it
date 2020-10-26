@@ -57,7 +57,7 @@
 
 /* News hero */
 .marketing-site-hero {
-  background: url("pexels-lukas-317385.jpg") top right no-repeat;
+  background: url("../Images/hero-images/news-hero.jpg") top right no-repeat;
   border-top: 5px solid white;
   height: 65vh;
   background-size: cover;
@@ -164,7 +164,7 @@
 
 /* Jobs hero */
 .marketing-site-hero-jobs {
-  background: url("pexels-александар-цветановић-1422286.jpg") top right no-repeat;
+  background: url("../Images/hero-images/jobs-hero.jpg") top right no-repeat;
   border-bottom: 5px solid white;
   height: 65vh;
   background-size: cover;
