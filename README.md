@@ -1,7 +1,12 @@
 # Tech.IT
 
 ## Description 
-Website dedicated to technology news and jobs. 
+Website dedicated to technology news and jobs.
+
+## User Story
+*As a Software Developer I want to see the latest technology industry news so that I can keep up-to-date with changes in the industry.
+*As a Software Developer, I want the ability to lookup available jobs in my field so I can advance my professional career.
+*As a Software Developer, I want to see inspirational quotes from technology leaders to keep me motivated.
 
 ## Usage
 * When opening the page, the user is presented with two main heroes for news and jobs respectively, and a timed generated quotes section
@@ -20,14 +25,11 @@ Website dedicated to technology news and jobs.
 ## Image
 ![Tech.ITScreenshot](Tech.ITScreenshot.png)
 
-
 ## Links
 * GitHub Repository: https://github.com/StudyGroup2021/tech.it.git
 * GitHub Pages: https://studygroup2021.github.io/tech.it/index.html
 
 ## Development Team
-
-
 @. Enxhi Salaj
 @. Megan Carnaghi
 @. Pierce Rogg
