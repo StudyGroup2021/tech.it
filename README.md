@@ -19,8 +19,8 @@ Website dedicated to technology news and jobs.
 
 ## Technology used
 * Foundation : https://get.foundation/templates.html
-* News API: https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=ApiKey
-* Jobs API: https://www.themuse.com/api/public/jobs?category=Business%20%26%20Strategy&category=Creative%20%26%20Design&category=Data%20Science&category=Project%20%26%20Product%20Management&category=Social%20Media%20%26%20Community&page=5&descending=false
+* New York Times API: https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=ApiKey
+* The Muse API: https://www.themuse.com/api/public/jobs?category=Business%20%26%20Strategy&category=Creative%20%26%20Design&category=Data%20Science&category=Project%20%26%20Product%20Management&category=Social%20Media%20%26%20Community&page=5&descending=false
 * Pexels: https://www.pexels.com/
 * Hatchful: https://hatchful.shopify.com/
 * Font Awesome: https://fontawesome.com/
