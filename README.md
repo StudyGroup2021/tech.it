@@ -40,3 +40,6 @@ Website dedicated to technology news and jobs.
 @. Muneeb Ali
 @. Alex Tatum
  © Copyright 2020
+ 
+## License
+![license](https://img.shields.io/badge/License-MIT-success)
